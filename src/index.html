@@ -8,6 +8,7 @@
   <title>Coffee Vibes!</title>
 
   <script src="//cdn.8thwall.com/web/aframe/8frame-0.9.0.min.js"></script>
+  <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.min.js"></script>
 
   <!-- XR Extras - provides utilities like load screen, almost there, and error handling.
          See github.com/8thwall/web/xrextras -->
@@ -31,7 +32,10 @@
       <!-- Credit to Poly by Google for the model: https://poly.google.com/view/dA5osnS0Rzj -->
       <a-asset-item id="jelly-glb" src="jellyfish-model.glb"></a-asset-item>
       <a-asset-item id="coffeestation-glb" src="targets/coffee_machine_animated/scene.gltf"></a-asset-item>
+      <a-asset-item id="starbucks-glb" src="targets/starbucks_grande_coffee_cup_caution_hot/scene.gltf"></a-asset-item>
+
       <img id="jelly-thumb" src="targets/video-target.jpg">
+
       <video
         id="jelly-video"
         autoplay
@@ -62,7 +66,7 @@
     <!-- Note: "name:" must be set to the name of the image target uploaded to the 8th Wall Console -->
     <a-entity xrextras-named-image-target="name: sbux-target">
       <!-- Add a child entity that can be rotated independently of the image target. -->
-      <a-entity xrextras-one-finger-rotate gltf-model="#jelly-glb"></a-entity>
+      <a-entity xrextras-one-finger-rotate gltf-model="#starbucks-glb" scale='0.15 0.15 0.15'></a-entity>
     </a-entity>
 
     <!-- Note: "name:" must be set to the name of the image target uploaded to the 8th Wall Console -->
@@ -80,7 +84,7 @@
     <!-- Note: "name:" must be set to the name of the image target uploaded to the 8th Wall Console -->
     <a-entity xrextras-named-image-target="name: coffeestation-target">
       <!-- Add a child entity that can be rotated independently of the image target. -->
-      <a-entity xrextras-one-finger-rotate gltf-model="#coffeestation-glb"></a-entity>
+      <a-entity xrextras-one-finger-rotate gltf-model="#coffeestation-glb" scale='0.15 0.15 0.15' animation-mixer></a-entity>
     </a-entity
 
   </a-scene>

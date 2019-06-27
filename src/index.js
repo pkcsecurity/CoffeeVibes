@@ -124,7 +124,7 @@ window.onload = () => {
            console.log('It is OK bro.');
          },
          callbackDetect: on_detect,
-         neuralNet: '../../neuralNets/basic4.json',
+         neuralNet: '../neuralNets/basic4.json',
          nDetectionPerLoop: 3,
          animateDelay: 2, //in ms
          scaleFactor: 200 //40

@@ -28,7 +28,7 @@
 
   <a-scene
     shoot-tomato
-    xrweb="disableWorldTracking: true"
+    xrweb
     xrextras-gesture-detector
     xrextras-almost-there
     xrextras-loading
@@ -102,6 +102,15 @@
       position="0 -1 0">
     </a-box>
     
+    <a-entity
+      id="also-ground"
+      class="cantap"
+      geometry="primitive: box"
+      material="color: #ffffff; transparent: true; opacity: 0.0"
+      scale="1000 2 1000"
+      position="0 -1 0">
+    </a-entity>
+      
   </a-scene>
 
 </body>

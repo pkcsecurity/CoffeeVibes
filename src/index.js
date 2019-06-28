@@ -1,11 +1,10 @@
 AFRAME.registerComponent('shoot-tomato', {
   init: function() {
     const camera = document.getElementById('camera');
+    const bombDropSnd = document.querySelector('#bombDrop').components.sound;
+    const bombExplodeSnd = document.querySelector('#bombExplode').components.sound;
 
     this.el.sceneEl.addEventListener('touchstart', (event) => {
-      const bombDropSnd = document.querySelector('#bombDrop').components.sound;
-      const bombExplodeSnd = document.querySelector('#bombExplode').components.sound;
-
       bombDropSnd.playSound();
 
       // Create element to be thrown, setting position, scale, and model

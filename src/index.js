@@ -1,9 +1,12 @@
 AFRAME.registerComponent('shoot-tomato', {
   init: function() {
     const camera = document.getElementById('camera');
-    // const splatSnd = document.querySelector('#splat').components.sound
+    const bombDropSnd = document.querySelector('#bombDrop').components.sound;
+    const bombExplodeSnd = document.querySelector('#bombExplode').components.sound;
 
     this.el.sceneEl.addEventListener('touchstart', (event) => {
+      bombDropSnd.playSound();
+
       // Create element to be thrown, setting position, scale, and model
       const tomato = document.createElement('a-entity');
       tomato.setAttribute('position', camera.object3D.position);
@@ -38,6 +41,9 @@ AFRAME.registerComponent('shoot-tomato', {
         didCollide = true;
 
         tomato.setAttribute('visible', 'false');
+
+        bombDropSnd.stopSound();
+        bombExplodeSnd.playSound();
 
         const collisionStats = event.detail.contact;
 

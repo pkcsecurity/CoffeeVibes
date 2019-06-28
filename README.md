@@ -1,17 +1,14 @@
 # AR Hackathon Demo for PKC
 
-Inundate PKCeizures with coffee! Make them happy after pouring corporate coffee into their real world mugs.
+Inundate PKCeizures with coffee! Make them happy after replacing their small corporate coffee cups with large corporate coffee cups.
 
 ### Goals
 
 * Use WebXR libraries to allow web hosted AR experiences on any device without needing to learn ARKit, Swift, etc...
-* Do object/face detection (Recognize faces to overlay mood, recognize coffee mug to begin coffee pour)
-* Bring animations into real life (Corporate coffee poured into their mugs)
+* Do image detection to replace real world objects w/ virtual objects
+* Bring in virtual objects on demand - throw coffee at people who need it
 
 
 ### Instructions
 
-Download WebXR browser from app store
-https://apps.apple.com/us/app/webxr-viewer/id1295998056
-
-Visit https hosted site with browser and blast caffeine at people.
+Visit https hosted site with mobile browser (safari if using iOS) and blast caffeine at people.

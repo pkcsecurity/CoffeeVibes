@@ -36,21 +36,8 @@
 
     <a-assets>
       <!-- Credit to Poly by Google for the model: https://poly.google.com/view/dA5osnS0Rzj -->
-      <a-asset-item id="jelly-glb" src="jellyfish-model.glb"></a-asset-item>
       <a-asset-item id="coffeestation-glb" src="targets/coffee_machine_animated/scene.gltf"></a-asset-item>
       <a-asset-item id="starbucks-glb" src="targets/starbucks_grande_coffee_cup_caution_hot/scene.gltf"></a-asset-item>
-
-      <img id="jelly-thumb" src="targets/video-target.jpg">
-
-      <video
-        id="jelly-video"
-        autoplay
-        muted
-        crossorigin="anonymous"
-        loop="true"
-        src="jellyfish-video.mp4">
-      </video>
-
       <a-asset-item preload="auto" class="a-sound" id="bombDropSound" src="bomb-drop.mp3" response-type="arraybuffer"></a-asset-item>
       <a-asset-item preload="auto" class="a-sound" id="bombExplodeSound" src="bomb-explode.mp3" response-type="arraybuffer"></a-asset-item>
     </a-assets>
@@ -69,28 +56,9 @@
     <a-light type="ambient" intensity="1"></a-light>
 
     <!-- Note: "name:" must be set to the name of the image target uploaded to the 8th Wall Console -->
-    <a-entity
-      xrextras-named-image-target="name: arte-target"
-      xrextras-play-video="video: #jelly-video; thumb: #jelly-thumb; canstop: true"
-      geometry="primitive: plane; height: 1; width: 0.79;">
-    </a-entity>
-
-    <!-- Note: "name:" must be set to the name of the image target uploaded to the 8th Wall Console -->
     <a-entity xrextras-named-image-target="name: sbux-target">
       <!-- Add a child entity that can be rotated independently of the image target. -->
       <a-entity xrextras-one-finger-rotate gltf-model="#starbucks-glb" scale='0.2 0.2 0.2' position='0 -0.4 0'></a-entity>
-    </a-entity>
-
-    <!-- Note: "name:" must be set to the name of the image target uploaded to the 8th Wall Console -->
-    <a-entity xrextras-named-image-target="name: buildingsign-target">
-      <!-- Add a child entity that can be rotated independently of the image target. -->
-      <a-entity xrextras-one-finger-rotate gltf-model="#jelly-glb"></a-entity>
-    </a-entity>
-
-    <!-- Note: "name:" must be set to the name of the image target uploaded to the 8th Wall Console -->
-    <a-entity xrextras-named-image-target="name: noskateboardingsign-target">
-      <!-- Add a child entity that can be rotated independently of the image target. -->
-      <a-entity xrextras-one-finger-rotate gltf-model="#jelly-glb"></a-entity>
     </a-entity>
 
     <!-- Note: "name:" must be set to the name of the image target uploaded to the 8th Wall Console -->
